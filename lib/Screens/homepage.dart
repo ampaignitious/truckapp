@@ -34,7 +34,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Page[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: onItemTapped,
+        currentIndex: _selectedIndex,
+        onTap: ((value) => onItemTapped(value)),
         backgroundColor: Colors.transparent,
         elevation: 0,
         type: BottomNavigationBarType.shifting,

@@ -71,7 +71,7 @@ class _FirstScreenState extends State<FirstScreen>
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 5),
             child: CircleAvatar(
               backgroundImage: AssetImage("assets/image11.png"),
             ),
