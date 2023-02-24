@@ -46,18 +46,12 @@ class _FirstScreenState extends State<FirstScreen>
           size: 40,
           color: Color.fromARGB(248, 97, 96, 96),
         ),
-        title: Wrap(
+        title: Row(
           children: [
-            SizedBox(
-              width: 20,
-            ),
             Icon(
               Icons.location_on,
               color: Colors.green,
               size: 30,
-            ),
-            SizedBox(
-              width: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 2),
@@ -73,14 +67,14 @@ class _FirstScreenState extends State<FirstScreen>
               Icons.arrow_drop_down,
               color: Colors.black,
             ),
-            SizedBox(
-              width: 28,
-            ),
           ],
         ),
         actions: [
-          CircleAvatar(
-            backgroundImage: AssetImage("assets/image11.png"),
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/image11.png"),
+            ),
           ),
         ],
       ),
