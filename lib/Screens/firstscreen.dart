@@ -38,6 +38,52 @@ class _FirstScreenState extends State<FirstScreen>
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 5, vsync: this);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Icon(
+          Icons.menu,
+          size: 40,
+          color: Color.fromARGB(248, 97, 96, 96),
+        ),
+        title: Wrap(
+          children: [
+            SizedBox(
+              width: 20,
+            ),
+            Icon(
+              Icons.location_on,
+              color: Colors.green,
+              size: 30,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Text(
+                "Shared Resources",
+                style: GoogleFonts.lato(
+                  color: Colors.green,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            Icon(
+              Icons.arrow_drop_down,
+              color: Colors.black,
+            ),
+            SizedBox(
+              width: 28,
+            ),
+          ],
+        ),
+        actions: [
+          CircleAvatar(
+            backgroundImage: AssetImage("assets/image11.png"),
+          ),
+        ],
+      ),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -45,44 +91,7 @@ class _FirstScreenState extends State<FirstScreen>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.menu,
-                      size: 40,
-                      color: Color.fromARGB(248, 97, 96, 96),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Icon(
-                      Icons.location_on,
-                      color: Colors.green,
-                      size: 30,
-                    ),
-                    Text(
-                      "Shared Resources",
-                      style: GoogleFonts.lato(
-                        color: Colors.green,
-                        fontSize: 18,
-                      ),
-                    ),
-                    Icon(Icons.arrow_drop_down),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    CircleAvatar(
-                      backgroundImage: AssetImage("assets/image11.png"),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20,
+                height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 24),
