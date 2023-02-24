@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:truckapp/Screens/drawer_screen.dart';
 import 'package:truckapp/Screens/imagedisplay.dart';
 
 import 'listScreenPage.dart';
@@ -136,43 +137,9 @@ class _FirstScreenState extends State<FirstScreen>
                 child: TabBarView(
                   controller: _tabController,
                   children: [
-                    ImageDisplay(vehicletype: "images"),
-                    ListView.builder(
-                      itemCount: images.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: ((context, index) {
-                        return Container(
-                          margin: EdgeInsets.only(
-                              left: 20, bottom: 20, right: 20, top: 10),
-                          height: 200,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(171, 214, 211, 211),
-                            image: DecorationImage(
-                              image: AssetImage(Trucks.elementAt(index)),
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                    ListView.builder(
-                      itemCount: images.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: ((context, index) {
-                        return Container(
-                          margin: EdgeInsets.only(
-                              left: 20, bottom: 20, right: 20, top: 10),
-                          height: 200,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(171, 214, 211, 211),
-                            image: DecorationImage(
-                              image: AssetImage(pickups.elementAt(index)),
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
+                    ImageDisplay(vehicletype: images),
+                    ImageDisplay(vehicletype: Trucks),
+                    ImageDisplay(vehicletype: pickups),
                     Center(child: Text("Images of vans to be added later")),
                     Center(child: Text("Images of SDN to be added later")),
                   ],

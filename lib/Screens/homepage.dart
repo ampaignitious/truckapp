@@ -4,6 +4,7 @@ import 'package:truckapp/Screens/displayscreen.dart';
 import 'package:truckapp/Screens/firstscreen.dart';
 import 'package:truckapp/Screens/search_page.dart';
 
+import 'drawer_screen.dart';
 import 'listScreenPage.dart';
 import 'notification_page.dart';
 import 'settings_page.dart';
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   List Page = [
     FirstScreen(),
-    displayScreen(),
+    SearchPage(),
     NotificationPage(),
     SettingsPage(),
   ];

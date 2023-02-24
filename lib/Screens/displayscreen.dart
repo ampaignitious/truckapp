@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class displayScreen extends StatelessWidget {
-  const displayScreen({super.key});
+  String image_name;
+  String image_text;
+  displayScreen(
+      {required this.image_name, required this.image_text, super.key});
 
   @override
   Widget build(BuildContext context) {
+    String imgurl = image_name;
     return Scaffold(
       body: ListView(
         scrollDirection: Axis.vertical,
@@ -33,9 +37,14 @@ class displayScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(Icons.arrow_back_ios),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(Icons.arrow_back_ios),
+                        ),
                         Text(
-                          "Fuso Fighter",
+                          "$image_text",
                           style: TextStyle(fontSize: 25, color: Colors.green),
                         ),
                         Icon(Icons.insert_link_outlined)
@@ -56,7 +65,7 @@ class displayScreen extends StatelessWidget {
                       color: Color.fromARGB(255, 235, 234, 234),
                       image: DecorationImage(
                         fit: BoxFit.contain,
-                        image: AssetImage("assets/image11.png"),
+                        image: AssetImage("assets/$image_name"),
                       ),
                     ),
                   )
